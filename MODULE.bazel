@@ -1,3 +1,5 @@
+module(name = "nss")
+
 bazel_dep(name = "rules_cc", version = "0.2.14")
 bazel_dep(name = "bazel_skylib", version = "1.9.0")
 bazel_dep(name = "nspr")
