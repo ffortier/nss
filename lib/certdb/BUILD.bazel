@@ -1,0 +1,34 @@
+load("//lib:config.bzl", "cc_library")
+
+exports_files([
+    "cert.h",
+    "certdb.h",
+    "certi.h",
+    "certt.h",
+    "certxutl.h",
+    "genname.h",
+    "xconst.h",
+])
+
+cc_library(
+    name = "certdb",
+    srcs = [
+        "alg1485.c",
+        "certdb.c",
+        "certv3.c",
+        "certxutl.c",
+        "crl.c",
+        "genname.c",
+        "polcyxtn.c",
+        "secname.c",
+        "stanpcertdb.c",
+        "xauthkid.c",
+        "xbsconst.c",
+        "xconst.c",
+    ],
+    visibility = ["//lib:__subpackages__"],
+    deps = [
+        "@nspr//lib/ds",
+        "@nspr//lib/libc",
+    ],
+)

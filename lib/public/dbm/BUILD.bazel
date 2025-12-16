@@ -1,0 +1,7 @@
+load("@bazel_skylib//rules:copy_file.bzl", "copy_file")
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+
+copy_file(name = "mcom_db", src = "//lib/dbm/include:mcom_db.h", out = "mcom_db.h")
+copy_file(name = "ncompat", src = "//lib/dbm/include:ncompat.h", out = "ncompat.h")
+copy_file(name = "winfile", src = "//lib/dbm/include:winfile.h", out = "winfile.h")
+cc_library(name="headers", includes = ["."], hdrs = [":mcom_db", ":ncompat", ":winfile"], visibility = ["//lib:__subpackages__"])

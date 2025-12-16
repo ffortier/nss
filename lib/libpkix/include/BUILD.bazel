@@ -1,0 +1,17 @@
+exports_files([
+    "pkix.h",
+    "pkix_certsel.h",
+    "pkix_certstore.h",
+    "pkix_checker.h",
+    "pkix_crlsel.h",
+    "pkix_errorstrings.h",
+    "pkix_params.h",
+    "pkix_pl_pki.h",
+    "pkix_pl_system.h",
+    "pkix_results.h",
+    "pkix_revchecker.h",
+    "pkix_sample_modules.h",
+    "pkix_util.h",
+    "pkixt.h",
+])
+

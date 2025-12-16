@@ -1,0 +1,19 @@
+exports_files([
+    "alghmac.h",
+    "blake2b.h",
+    "blapi.h",
+    "blapit.h",
+    "chacha20poly1305.h",
+    "cmac.h",
+    "ec.h",
+    "ecl/ecl-curve.h",
+    "ecl/ecl-exp.h",
+    "ecl/ecl.h",
+    "ecl/eclt.h",
+    "hmacct.h",
+    "nsslowhash.h",
+    "secmpi.h",
+    "secrng.h",
+    "shsign.h",
+])
+

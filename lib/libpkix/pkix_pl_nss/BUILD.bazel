@@ -1,0 +1,11 @@
+load("//lib:config.bzl", "cc_library")
+
+cc_library(
+    name = "pkix_pl_nss",
+    implementation_deps = [
+        "//lib/libpkix/pkix_pl_nss/module",
+        "//lib/libpkix/pkix_pl_nss/pki",
+        "//lib/libpkix/pkix_pl_nss/system",
+    ],
+    visibility = ["//lib:__subpackages__"],
+)

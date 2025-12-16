@@ -1,0 +1,10 @@
+load("@bazel_skylib//rules:copy_file.bzl", "copy_file")
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+
+copy_file(name = "hash", src = "//lib/dbm/include:hash.h", out = "hash.h")
+copy_file(name = "queue", src = "//lib/dbm/include:queue.h", out = "queue.h")
+copy_file(name = "page", src = "//lib/dbm/include:page.h", out = "page.h")
+copy_file(name = "search", src = "//lib/dbm/include:search.h", out = "search.h")
+copy_file(name = "hsearch", src = "//lib/dbm/include:hsearch.h", out = "hsearch.h")
+copy_file(name = "extern", src = "//lib/dbm/include:extern.h", out = "extern.h")
+cc_library(name="headers", includes = ["."], hdrs = [":hash", ":queue", ":page", ":search", ":hsearch", ":extern"], visibility = ["//lib:__subpackages__"])

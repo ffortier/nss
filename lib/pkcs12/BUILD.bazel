@@ -1,0 +1,28 @@
+load("//lib:config.bzl", "cc_library")
+
+exports_files([
+    "p12.h",
+    "p12plcy.h",
+    "p12t.h",
+    "pkcs12.h",
+    "pkcs12t.h",
+])
+
+cc_library(
+    name = "pkcs12",
+    srcs = [
+        "p12creat.c",
+        "p12d.c",
+        "p12dec.c",
+        "p12e.c",
+        "p12local.c",
+        "p12local.h",
+        "p12plcy.c",
+        "p12tmpl.c",
+    ],
+    deps = [
+        "@nspr//lib/ds",
+        "@nspr//lib/libc",
+        "@nspr//pr",
+    ],
+)

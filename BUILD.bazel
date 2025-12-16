@@ -1,0 +1,51 @@
+load("@rules_cc//cc:cc_shared_library.bzl", "cc_shared_library")
+
+cc_shared_library(
+    name = "dbm",
+    dynamic_deps = [
+        "@nspr//:nspr4",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+        "//lib/dbm",
+    ],
+)
+
+cc_shared_library(
+    name = "nssutil3",
+    dynamic_deps = [
+        "@nspr//:nspr4",
+        "@nspr//:plds4",
+        "@nspr//:plc4",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+        "//lib/util",
+    ],
+)
+
+cc_shared_library(
+    name = "nss3",
+    dynamic_deps = [
+        "@nspr//:nspr4",
+        "@nspr//:plds4",
+        "@nspr//:plc4",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+        "//lib/nss",
+    ],
+)
+
+cc_shared_library(
+    name = "smime3",
+    dynamic_deps = [
+        "@nspr//:nspr4",
+        "@nspr//:plds4",
+        "@nspr//:plc4",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+        "//lib/smime",
+    ],
+)

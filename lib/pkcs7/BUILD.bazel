@@ -1,0 +1,7 @@
+exports_files([
+    "p7local.h",
+    "pkcs7t.h",
+    "secmime.h",
+    "secpkcs7.h",
+])
+

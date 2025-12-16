@@ -1,0 +1,32 @@
+load("//lib:config.bzl", "cc_library")
+
+exports_files([
+    "ckhelper.h",
+    "dev.h",
+    "devm.h",
+    "devt.h",
+    "devtm.h",
+    "nssdev.h",
+    "nssdevt.h",
+])
+
+cc_library(
+    name = "nssdev",
+    srcs = [
+        "ckhelper.c",
+        "devslot.c",
+        "devtoken.c",
+        "devutil.c",
+    ],
+    deps = [
+        "@nspr//lib/ds",
+        "@nspr//lib/libc",
+        "@nspr//pr",
+    ],
+)
+
+alias(
+    name = "dev",
+    actual = ":nssdev",
+    visibility = ["//lib:__subpackages__"],
+)

@@ -1,0 +1,39 @@
+load("//lib:config.bzl", "cc_library")
+
+exports_files([
+    "nsspki.h",
+    "nsspkit.h",
+    "pki.h",
+    "pki3hack.h",
+    "pkim.h",
+    "pkistore.h",
+    "pkit.h",
+    "pkitm.h",
+])
+
+cc_library(
+    name = "nsspki",
+    srcs = [
+        "asymmkey.c",
+        "certdecode.c",
+        "certificate.c",
+        "cryptocontext.c",
+        "pki3hack.c",
+        "pkibase.c",
+        "pkistore.c",
+        "symmkey.c",
+        "tdcache.c",
+        "trustdomain.c",
+    ],
+    deps = [
+        "@nspr//lib/ds",
+        "@nspr//lib/libc",
+        "@nspr//pr",
+    ],
+)
+
+alias(
+    name = "pki",
+    actual = ":nsspki",
+    visibility = ["//lib:__subpackages__"],
+)

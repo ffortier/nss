@@ -1,0 +1,32 @@
+load("//lib:config.bzl", "cc_library")
+
+cc_library(
+    name = "dbm",
+    srcs = [
+        "src/h_bigkey.c",
+        "src/h_func.c",
+        "src/h_log2.c",
+        "src/h_page.c",
+        "src/hash.c",
+        "src/hash_buf.c",
+        "src/mktemp.c",
+    ],
+    hdrs = [
+        "//lib/dbm/include:extern.h",
+        "//lib/dbm/include:hash.h",
+        "//lib/dbm/include:hsearch.h",
+        "//lib/dbm/include:mcom_db.h",
+        "//lib/dbm/include:ncompat.h",
+        "//lib/dbm/include:page.h",
+        "//lib/dbm/include:queue.h",
+        "//lib/dbm/include:search.h",
+        "//lib/dbm/include:winfile.h",
+    ],
+    includes = [
+        "./include",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@nspr//pr",
+    ],
+)

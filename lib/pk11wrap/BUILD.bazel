@@ -1,0 +1,63 @@
+load("//lib:config.bzl", "cc_library")
+
+exports_files([
+    "dev3hack.h",
+    "pk11func.h",
+    "pk11hpke.h",
+    "pk11pqg.h",
+    "pk11priv.h",
+    "pk11pub.h",
+    "pk11sdr.h",
+    "secmod.h",
+    "secmodi.h",
+    "secmodt.h",
+    "secmodti.h",
+    "secpkcs5.h",
+])
+
+DEFINES = select({
+    "//lib:linux_x86_64": [
+        "SHLIB_SUFFIX=\\\"{DLL_SUFFIX}\\\"".format(DLL_SUFFIX = ".so"),
+        "SHLIB_PREFIX=\\\"{DLL_PREFIX}\\\"".format(DLL_PREFIX = "lib"),
+        "NSS_SHLIB_VERSION=\\\"{NSS_LIBRARY_VERSION}\\\"".format(NSS_LIBRARY_VERSION = 3),
+        "SOFTOKEN_SHLIB_VERSION=\\\"{SOFTOKEN_LIBRARY_VERSION}\\\"".format(SOFTOKEN_LIBRARY_VERSION = 3),
+    ],
+})
+
+cc_library(
+    name = "pk11wrap",
+    srcs = [
+        "dev3hack.c",
+        "pk11akey.c",
+        "pk11auth.c",
+        "pk11cert.c",
+        "pk11cxt.c",
+        "pk11err.c",
+        "pk11hpke.c",
+        "pk11kea.c",
+        "pk11list.c",
+        "pk11load.c",
+        "pk11mech.c",
+        "pk11merge.c",
+        "pk11nobj.c",
+        "pk11obj.c",
+        "pk11pars.c",
+        "pk11pbe.c",
+        "pk11pk12.c",
+        "pk11pqg.c",
+        "pk11sdr.c",
+        "pk11skey.c",
+        "pk11slot.c",
+        "pk11util.c",
+    ],
+    local_defines = DEFINES,
+    textual_hdrs = [
+        "debug_module.c",
+    ],
+    visibility = ["//lib:__subpackages__"],
+    deps = [
+        "@nspr//lib/ds",
+        "@nspr//lib/libc",
+        "@nspr//pr",
+    ],
+)

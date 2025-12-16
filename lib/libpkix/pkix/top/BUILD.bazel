@@ -1,0 +1,27 @@
+load("//lib:config.bzl", "cc_library")
+
+exports_files([
+    "pkix_build.h",
+    "pkix_lifecycle.h",
+    "pkix_validate.h",
+])
+
+cc_library(
+    name = "pkixtop",
+    srcs = [
+        "pkix_build.c",
+        "pkix_lifecycle.c",
+        "pkix_validate.c",
+    ],
+    deps = [
+        "@nspr//lib/ds",
+        "@nspr//lib/libc",
+        "@nspr//pr",
+    ],
+)
+
+alias(
+    name = "top",
+    actual = ":pkixtop",
+    visibility = ["//lib:__subpackages__"],
+)

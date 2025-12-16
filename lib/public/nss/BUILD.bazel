@@ -1,0 +1,738 @@
+load("@bazel_skylib//rules:copy_file.bzl", "copy_file")
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+
+copy_file(
+    name = "pkcs1sig",
+    src = "//lib/util:pkcs1sig.h",
+    out = "pkcs1sig.h",
+)
+
+copy_file(
+    name = "keythi",
+    src = "//lib/cryptohi:keythi.h",
+    out = "keythi.h",
+)
+
+copy_file(
+    name = "pk11pub",
+    src = "//lib/pk11wrap:pk11pub.h",
+    out = "pk11pub.h",
+)
+
+copy_file(
+    name = "nssckmdt",
+    src = "//lib/ckfw:nssckmdt.h",
+    out = "nssckmdt.h",
+)
+
+copy_file(
+    name = "pkcs12t",
+    src = "//lib/pkcs12:pkcs12t.h",
+    out = "pkcs12t.h",
+)
+
+copy_file(
+    name = "certdb",
+    src = "//lib/certdb:certdb.h",
+    out = "certdb.h",
+)
+
+copy_file(
+    name = "hasht",
+    src = "//lib/util:hasht.h",
+    out = "hasht.h",
+)
+
+copy_file(
+    name = "sslt",
+    src = "//lib/ssl:sslt.h",
+    out = "sslt.h",
+)
+
+copy_file(
+    name = "secmodt",
+    src = "//lib/pk11wrap:secmodt.h",
+    out = "secmodt.h",
+)
+
+copy_file(
+    name = "nsslocks",
+    src = "//lib/util:nsslocks.h",
+    out = "nsslocks.h",
+)
+
+copy_file(
+    name = "p12plcy",
+    src = "//lib/pkcs12:p12plcy.h",
+    out = "p12plcy.h",
+)
+
+copy_file(
+    name = "secpkcs7",
+    src = "//lib/pkcs7:secpkcs7.h",
+    out = "secpkcs7.h",
+)
+
+copy_file(
+    name = "cmsreclist",
+    src = "//lib/smime:cmsreclist.h",
+    out = "cmsreclist.h",
+)
+
+copy_file(
+    name = "pk11priv",
+    src = "//lib/pk11wrap:pk11priv.h",
+    out = "pk11priv.h",
+)
+
+copy_file(
+    name = "pk11hpke",
+    src = "//lib/pk11wrap:pk11hpke.h",
+    out = "pk11hpke.h",
+)
+
+copy_file(
+    name = "ocsp",
+    src = "//lib/certhigh:ocsp.h",
+    out = "ocsp.h",
+)
+
+copy_file(
+    name = "utilrename",
+    src = "//lib/util:utilrename.h",
+    out = "utilrename.h",
+)
+
+copy_file(
+    name = "nssckfwc",
+    src = "//lib/ckfw:nssckfwc.h",
+    out = "nssckfwc.h",
+)
+
+copy_file(
+    name = "nssckg",
+    src = "//lib/ckfw:nssckg.h",
+    out = "nssckg.h",
+)
+
+copy_file(
+    name = "jar-ds",
+    src = "//lib/jar:jar-ds.h",
+    out = "jar-ds.h",
+)
+
+copy_file(
+    name = "sslexp",
+    src = "//lib/ssl:sslexp.h",
+    out = "sslexp.h",
+)
+
+copy_file(
+    name = "pk11pqg",
+    src = "//lib/pk11wrap:pk11pqg.h",
+    out = "pk11pqg.h",
+)
+
+copy_file(
+    name = "pkcs12",
+    src = "//lib/pkcs12:pkcs12.h",
+    out = "pkcs12.h",
+)
+
+copy_file(
+    name = "pkcs11uri",
+    src = "//lib/util:pkcs11uri.h",
+    out = "pkcs11uri.h",
+)
+
+copy_file(
+    name = "secdert",
+    src = "//lib/util:secdert.h",
+    out = "secdert.h",
+)
+
+copy_file(
+    name = "nss",
+    src = "//lib/nss:nss.h",
+    out = "nss.h",
+)
+
+copy_file(
+    name = "p12t",
+    src = "//lib/pkcs12:p12t.h",
+    out = "p12t.h",
+)
+
+copy_file(
+    name = "shsign",
+    src = "//lib/freebl:shsign.h",
+    out = "shsign.h",
+)
+
+copy_file(
+    name = "lowkeyti",
+    src = "//lib/softoken:lowkeyti.h",
+    out = "lowkeyti.h",
+)
+
+copy_file(
+    name = "nssbase",
+    src = "//lib/base:nssbase.h",
+    out = "nssbase.h",
+)
+
+copy_file(
+    name = "secdig",
+    src = "//lib/util:secdig.h",
+    out = "secdig.h",
+)
+
+copy_file(
+    name = "secitem",
+    src = "//lib/util:secitem.h",
+    out = "secitem.h",
+)
+
+copy_file(
+    name = "p12",
+    src = "//lib/pkcs12:p12.h",
+    out = "p12.h",
+)
+
+copy_file(
+    name = "ml_dsat",
+    src = "//lib/util:ml_dsat.h",
+    out = "ml_dsat.h",
+)
+
+copy_file(
+    name = "pk11func",
+    src = "//lib/pk11wrap:pk11func.h",
+    out = "pk11func.h",
+)
+
+copy_file(
+    name = "nsshash",
+    src = "//lib/util:nsshash.h",
+    out = "nsshash.h",
+)
+
+copy_file(
+    name = "keyt",
+    src = "//lib/cryptohi:keyt.h",
+    out = "keyt.h",
+)
+
+copy_file(
+    name = "crmft",
+    src = "//lib/crmf:crmft.h",
+    out = "crmft.h",
+)
+
+copy_file(
+    name = "nssckft",
+    src = "//lib/ckfw:nssckft.h",
+    out = "nssckft.h",
+)
+
+copy_file(
+    name = "utilmodt",
+    src = "//lib/util:utilmodt.h",
+    out = "utilmodt.h",
+)
+
+copy_file(
+    name = "secoidt",
+    src = "//lib/util:secoidt.h",
+    out = "secoidt.h",
+)
+
+copy_file(
+    name = "preenc",
+    src = "//lib/ssl:preenc.h",
+    out = "preenc.h",
+)
+
+copy_file(
+    name = "nssckt",
+    src = "//lib/ckfw:nssckt.h",
+    out = "nssckt.h",
+)
+
+copy_file(
+    name = "nssrwlk",
+    src = "//lib/util:nssrwlk.h",
+    out = "nssrwlk.h",
+)
+
+copy_file(
+    name = "secport",
+    src = "//lib/util:secport.h",
+    out = "secport.h",
+)
+
+copy_file(
+    name = "cmst",
+    src = "//lib/smime:cmst.h",
+    out = "cmst.h",
+)
+
+copy_file(
+    name = "secmod",
+    src = "//lib/pk11wrap:secmod.h",
+    out = "secmod.h",
+)
+
+copy_file(
+    name = "cms",
+    src = "//lib/smime:cms.h",
+    out = "cms.h",
+)
+
+copy_file(
+    name = "secpkcs5",
+    src = "//lib/pk11wrap:secpkcs5.h",
+    out = "secpkcs5.h",
+)
+
+copy_file(
+    name = "secoid",
+    src = "//lib/util:secoid.h",
+    out = "secoid.h",
+)
+
+copy_file(
+    name = "certt",
+    src = "//lib/certdb:certt.h",
+    out = "certt.h",
+)
+
+copy_file(
+    name = "jar",
+    src = "//lib/jar:jar.h",
+    out = "jar.h",
+)
+
+copy_file(
+    name = "eccutil",
+    src = "//lib/util:eccutil.h",
+    out = "eccutil.h",
+)
+
+copy_file(
+    name = "portreg",
+    src = "//lib/util:portreg.h",
+    out = "portreg.h",
+)
+
+copy_file(
+    name = "nssckfwt",
+    src = "//lib/ckfw:nssckfwt.h",
+    out = "nssckfwt.h",
+)
+
+copy_file(
+    name = "crmf",
+    src = "//lib/crmf:crmf.h",
+    out = "crmf.h",
+)
+
+copy_file(
+    name = "ciferfam",
+    src = "//lib/util:ciferfam.h",
+    out = "ciferfam.h",
+)
+
+copy_file(
+    name = "ssl",
+    src = "//lib/ssl:ssl.h",
+    out = "ssl.h",
+)
+
+copy_file(
+    name = "utilparst",
+    src = "//lib/util:utilparst.h",
+    out = "utilparst.h",
+)
+
+copy_file(
+    name = "keyhi",
+    src = "//lib/cryptohi:keyhi.h",
+    out = "keyhi.h",
+)
+
+copy_file(
+    name = "sslproto",
+    src = "//lib/ssl:sslproto.h",
+    out = "sslproto.h",
+)
+
+copy_file(
+    name = "nssrwlkt",
+    src = "//lib/util:nssrwlkt.h",
+    out = "nssrwlkt.h",
+)
+
+copy_file(
+    name = "nssilock",
+    src = "//lib/util:nssilock.h",
+    out = "nssilock.h",
+)
+
+copy_file(
+    name = "seccomon",
+    src = "//lib/util:seccomon.h",
+    out = "seccomon.h",
+)
+
+copy_file(
+    name = "nssutil",
+    src = "//lib/util:nssutil.h",
+    out = "nssutil.h",
+)
+
+copy_file(
+    name = "kyber",
+    src = "//lib/util:kyber.h",
+    out = "kyber.h",
+)
+
+copy_file(
+    name = "base64",
+    src = "//lib/util:base64.h",
+    out = "base64.h",
+)
+
+copy_file(
+    name = "nssb64t",
+    src = "//lib/util:nssb64t.h",
+    out = "nssb64t.h",
+)
+
+copy_file(
+    name = "secasn1",
+    src = "//lib/util:secasn1.h",
+    out = "secasn1.h",
+)
+
+copy_file(
+    name = "pkcs11f",
+    src = "//lib/util:pkcs11f.h",
+    out = "pkcs11f.h",
+)
+
+copy_file(
+    name = "cmmft",
+    src = "//lib/crmf:cmmft.h",
+    out = "cmmft.h",
+)
+
+copy_file(
+    name = "secerr",
+    src = "//lib/util:secerr.h",
+    out = "secerr.h",
+)
+
+copy_file(
+    name = "nssckbi",
+    src = "//lib/ckfw/builtins:nssckbi.h",
+    out = "nssckbi.h",
+)
+
+copy_file(
+    name = "pkcs11n",
+    src = "//lib/util:pkcs11n.h",
+    out = "pkcs11n.h",
+)
+
+copy_file(
+    name = "ocspt",
+    src = "//lib/certhigh:ocspt.h",
+    out = "ocspt.h",
+)
+
+copy_file(
+    name = "cmmf",
+    src = "//lib/crmf:cmmf.h",
+    out = "cmmf.h",
+)
+
+copy_file(
+    name = "secmime",
+    src = "//lib/pkcs7:secmime.h",
+    out = "secmime.h",
+)
+
+copy_file(
+    name = "smime",
+    src = "//lib/smime:smime.h",
+    out = "smime.h",
+)
+
+copy_file(
+    name = "key",
+    src = "//lib/cryptohi:key.h",
+    out = "key.h",
+)
+
+copy_file(
+    name = "utilpars",
+    src = "//lib/util:utilpars.h",
+    out = "utilpars.h",
+)
+
+copy_file(
+    name = "pkcs11",
+    src = "//lib/util:pkcs11.h",
+    out = "pkcs11.h",
+)
+
+copy_file(
+    name = "secder",
+    src = "//lib/util:secder.h",
+    out = "secder.h",
+)
+
+copy_file(
+    name = "jarfile",
+    src = "//lib/jar:jarfile.h",
+    out = "jarfile.h",
+)
+
+copy_file(
+    name = "nssb64",
+    src = "//lib/util:nssb64.h",
+    out = "nssb64.h",
+)
+
+copy_file(
+    name = "lowkeyi",
+    src = "//lib/softoken:lowkeyi.h",
+    out = "lowkeyi.h",
+)
+
+copy_file(
+    name = "pkcs11t",
+    src = "//lib/util:pkcs11t.h",
+    out = "pkcs11t.h",
+)
+
+copy_file(
+    name = "sechash",
+    src = "//lib/cryptohi:sechash.h",
+    out = "sechash.h",
+)
+
+copy_file(
+    name = "cryptohi",
+    src = "//lib/cryptohi:cryptohi.h",
+    out = "cryptohi.h",
+)
+
+copy_file(
+    name = "pkcs7t",
+    src = "//lib/pkcs7:pkcs7t.h",
+    out = "pkcs7t.h",
+)
+
+copy_file(
+    name = "cert",
+    src = "//lib/certdb:cert.h",
+    out = "cert.h",
+)
+
+copy_file(
+    name = "nssilckt",
+    src = "//lib/util:nssilckt.h",
+    out = "nssilckt.h",
+)
+
+copy_file(
+    name = "blapit",
+    src = "//lib/freebl:blapit.h",
+    out = "blapit.h",
+)
+
+copy_file(
+    name = "nssckepv",
+    src = "//lib/ckfw:nssckepv.h",
+    out = "nssckepv.h",
+)
+
+copy_file(
+    name = "secdigt",
+    src = "//lib/util:secdigt.h",
+    out = "secdigt.h",
+)
+
+copy_file(
+    name = "sslerr",
+    src = "//lib/ssl:sslerr.h",
+    out = "sslerr.h",
+)
+
+copy_file(
+    name = "ecl-exp",
+    src = "//lib/freebl:ecl/ecl-exp.h",
+    out = "ecl-exp.h",
+)
+
+copy_file(
+    name = "pkcs11u",
+    src = "//lib/util:pkcs11u.h",
+    out = "pkcs11u.h",
+)
+
+copy_file(
+    name = "nssbaset",
+    src = "//lib/base:nssbaset.h",
+    out = "nssbaset.h",
+)
+
+copy_file(
+    name = "cryptoht",
+    src = "//lib/cryptohi:cryptoht.h",
+    out = "cryptoht.h",
+)
+
+copy_file(
+    name = "pk11sdr",
+    src = "//lib/pk11wrap:pk11sdr.h",
+    out = "pk11sdr.h",
+)
+
+copy_file(
+    name = "pkcs11p",
+    src = "//lib/util:pkcs11p.h",
+    out = "pkcs11p.h",
+)
+
+copy_file(
+    name = "nsslowhash",
+    src = "//lib/freebl:nsslowhash.h",
+    out = "nsslowhash.h",
+)
+
+copy_file(
+    name = "secasn1t",
+    src = "//lib/util:secasn1t.h",
+    out = "secasn1t.h",
+)
+
+copy_file(
+    name = "nssckfw",
+    src = "//lib/ckfw:nssckfw.h",
+    out = "nssckfw.h",
+)
+
+cc_library(
+    name = "headers",
+    hdrs = [
+        ":base64",
+        ":blapit",
+        ":cert",
+        ":certdb",
+        ":certt",
+        ":ciferfam",
+        ":cmmf",
+        ":cmmft",
+        ":cms",
+        ":cmsreclist",
+        ":cmst",
+        ":crmf",
+        ":crmft",
+        ":cryptohi",
+        ":cryptoht",
+        ":eccutil",
+        ":ecl-exp",
+        ":hasht",
+        ":jar",
+        ":jar-ds",
+        ":jarfile",
+        ":key",
+        ":keyhi",
+        ":keyt",
+        ":keythi",
+        ":kyber",
+        ":lowkeyi",
+        ":lowkeyti",
+        ":ml_dsat",
+        ":nss",
+        ":nssb64",
+        ":nssb64t",
+        ":nssbase",
+        ":nssbaset",
+        ":nssckbi",
+        ":nssckepv",
+        ":nssckft",
+        ":nssckfw",
+        ":nssckfwc",
+        ":nssckfwt",
+        ":nssckg",
+        ":nssckmdt",
+        ":nssckt",
+        ":nsshash",
+        ":nssilckt",
+        ":nssilock",
+        ":nsslocks",
+        ":nsslowhash",
+        ":nssrwlk",
+        ":nssrwlkt",
+        ":nssutil",
+        ":ocsp",
+        ":ocspt",
+        ":p12",
+        ":p12plcy",
+        ":p12t",
+        ":pk11func",
+        ":pk11hpke",
+        ":pk11pqg",
+        ":pk11priv",
+        ":pk11pub",
+        ":pk11sdr",
+        ":pkcs11",
+        ":pkcs11f",
+        ":pkcs11n",
+        ":pkcs11p",
+        ":pkcs11t",
+        ":pkcs11u",
+        ":pkcs11uri",
+        ":pkcs12",
+        ":pkcs12t",
+        ":pkcs1sig",
+        ":pkcs7t",
+        ":portreg",
+        ":preenc",
+        ":secasn1",
+        ":secasn1t",
+        ":seccomon",
+        ":secder",
+        ":secdert",
+        ":secdig",
+        ":secdigt",
+        ":secerr",
+        ":sechash",
+        ":secitem",
+        ":secmime",
+        ":secmod",
+        ":secmodt",
+        ":secoid",
+        ":secoidt",
+        ":secpkcs5",
+        ":secpkcs7",
+        ":secport",
+        ":shsign",
+        ":smime",
+        ":ssl",
+        ":sslerr",
+        ":sslexp",
+        ":sslproto",
+        ":sslt",
+        ":utilmodt",
+        ":utilpars",
+        ":utilparst",
+        ":utilrename",
+    ],
+    includes = ["."],
+    visibility = ["//lib:__subpackages__"],
+)

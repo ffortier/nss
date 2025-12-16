@@ -1,0 +1,34 @@
+load("//lib:config.bzl", "cc_library")
+
+exports_files([
+    "ocsp.h",
+    "ocspi.h",
+    "ocspt.h",
+    "ocspti.h",
+])
+
+cc_library(
+    name = "certhi",
+    srcs = [
+        "certhigh.c",
+        "certhtml.c",
+        "certreq.c",
+        "certvfy.c",
+        "certvfypkix.c",
+        "crlv2.c",
+        "ocsp.c",
+        "ocspsig.c",
+        "xcrldist.c",
+    ],
+    deps = [
+        "@nspr//lib/ds",
+        "@nspr//lib/libc",
+        "@nspr//pr",
+    ],
+)
+
+alias(
+    name = "certhigh",
+    actual = ":certhi",
+    visibility = ["//lib:__subpackages__"],
+)

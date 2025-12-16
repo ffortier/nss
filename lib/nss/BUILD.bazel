@@ -1,0 +1,39 @@
+load("//lib:config.bzl", "cc_library")
+
+exports_files([
+    "nss.h",
+    "nssoptions.h",
+    "nssrenam.h",
+])
+
+cc_library(
+    name = "nss",
+    srcs = [
+        "nssinit.c",
+        "nssoptions.c",
+        "nssver.c",
+        "utilwrap.c",
+    ],
+    copts = [
+        "-Ilib/util",
+    ],
+    implementation_deps = [
+        "//lib/base",
+        "//lib/certdb",
+        "//lib/certhigh",
+        "//lib/cryptohi",
+        "//lib/dev",
+        "//lib/libpkix",
+        "//lib/pk11wrap",
+        "//lib/pki",
+    ],
+    textual_hdrs = [
+        "//lib/util:templates.c",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@nspr//lib/ds",
+        "@nspr//lib/libc",
+        "@nspr//pr",
+    ],
+)

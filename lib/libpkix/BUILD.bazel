@@ -1,0 +1,34 @@
+load("//lib:config.bzl", "cc_library")
+
+cc_library(
+    name = "pkix",
+    hdrs = [
+        "//lib/libpkix/include:pkix.h",
+        "//lib/libpkix/include:pkix_certsel.h",
+        "//lib/libpkix/include:pkix_certstore.h",
+        "//lib/libpkix/include:pkix_checker.h",
+        "//lib/libpkix/include:pkix_crlsel.h",
+        "//lib/libpkix/include:pkix_errorstrings.h",
+        "//lib/libpkix/include:pkix_params.h",
+        "//lib/libpkix/include:pkix_pl_pki.h",
+        "//lib/libpkix/include:pkix_pl_system.h",
+        "//lib/libpkix/include:pkix_results.h",
+        "//lib/libpkix/include:pkix_revchecker.h",
+        "//lib/libpkix/include:pkix_sample_modules.h",
+        "//lib/libpkix/include:pkix_util.h",
+        "//lib/libpkix/include:pkixt.h",
+    ],
+    implementation_deps = [
+        "//lib/libpkix/pkix",
+        "//lib/libpkix/pkix_pl_nss",
+    ],
+    includes = [
+        "include",
+    ],
+)
+
+alias(
+    name = "libpkix",
+    actual = ":pkix",
+    visibility = ["//lib:__subpackages__"],
+)

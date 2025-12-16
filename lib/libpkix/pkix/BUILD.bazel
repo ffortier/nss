@@ -1,0 +1,15 @@
+load("//lib:config.bzl", "cc_library")
+
+cc_library(
+    name = "pkix",
+    implementation_deps = [
+        "//lib/libpkix/pkix/certsel",
+        "//lib/libpkix/pkix/checker",
+        "//lib/libpkix/pkix/crlsel",
+        "//lib/libpkix/pkix/params",
+        "//lib/libpkix/pkix/results",
+        "//lib/libpkix/pkix/store",
+        "//lib/libpkix/pkix/top",
+        "//lib/libpkix/pkix/util",
+    ],
+)

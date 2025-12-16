@@ -1,0 +1,25 @@
+load("//lib:config.bzl", "cc_library")
+
+exports_files([
+    "pkix_comcrlselparams.h",
+    "pkix_crlselector.h",
+])
+
+cc_library(
+    name = "pkixcrlsel",
+    srcs = [
+        "pkix_comcrlselparams.c",
+        "pkix_crlselector.c",
+    ],
+    deps = [
+        "@nspr//lib/ds",
+        "@nspr//lib/libc",
+        "@nspr//pr",
+    ],
+)
+
+alias(
+    name = "crlsel",
+    actual = ":pkixcrlsel",
+    visibility = ["//lib:__subpackages__"],
+)

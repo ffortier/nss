@@ -1,0 +1,12 @@
+exports_files([
+    "extern.h",
+    "hash.h",
+    "hsearch.h",
+    "mcom_db.h",
+    "ncompat.h",
+    "page.h",
+    "queue.h",
+    "search.h",
+    "winfile.h",
+])
+

@@ -1,0 +1,41 @@
+load("//lib:config.bzl", "cc_library")
+
+exports_files([
+    "cms.h",
+    "cmslocal.h",
+    "cmsreclist.h",
+    "cmst.h",
+    "smime.h",
+])
+
+cc_library(
+    name = "smime",
+    srcs = [
+        "cmsarray.c",
+        "cmsasn1.c",
+        "cmsattr.c",
+        "cmscinfo.c",
+        "cmscipher.c",
+        "cmsdecode.c",
+        "cmsdigdata.c",
+        "cmsdigest.c",
+        "cmsencdata.c",
+        "cmsencode.c",
+        "cmsenvdata.c",
+        "cmsmessage.c",
+        "cmspubkey.c",
+        "cmsrecinfo.c",
+        "cmsreclist.c",
+        "cmssigdata.c",
+        "cmssiginfo.c",
+        "cmsudf.c",
+        "cmsutil.c",
+        "smimemessage.c",
+        "smimeutil.c",
+        "smimever.c",
+    ],
+    implementation_deps = [
+        "//lib/pkcs12",
+    ],
+    visibility = ["//visibility:public"],
+)

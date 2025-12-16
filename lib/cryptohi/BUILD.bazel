@@ -1,0 +1,29 @@
+load("//lib:config.bzl", "cc_library")
+
+exports_files([
+    "cryptohi.h",
+    "cryptoht.h",
+    "key.h",
+    "keyhi.h",
+    "keyi.h",
+    "keyt.h",
+    "keythi.h",
+    "sechash.h",
+])
+
+cc_library(
+    name = "cryptohi",
+    srcs = [
+        "dsautil.c",
+        "sechash.c",
+        "seckey.c",
+        "secsign.c",
+        "secvfy.c",
+    ],
+    visibility = ["//lib:__subpackages__"],
+    deps = [
+        "@nspr//lib/ds",
+        "@nspr//lib/libc",
+        "@nspr//pr",
+    ],
+)

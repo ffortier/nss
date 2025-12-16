@@ -1,0 +1,17 @@
+exports_files([
+    "ck.h",
+    "ckfw.h",
+    "ckfwm.h",
+    "ckfwtm.h",
+    "ckmd.h",
+    "ckt.h",
+    "nssckepv.h",
+    "nssckft.h",
+    "nssckfw.h",
+    "nssckfwc.h",
+    "nssckfwt.h",
+    "nssckg.h",
+    "nssckmdt.h",
+    "nssckt.h",
+])
+

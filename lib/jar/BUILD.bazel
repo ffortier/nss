@@ -1,0 +1,6 @@
+exports_files([
+    "jar-ds.h",
+    "jar.h",
+    "jarfile.h",
+])
+

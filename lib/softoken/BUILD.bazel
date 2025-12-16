@@ -1,0 +1,12 @@
+exports_files([
+    "lgglue.h",
+    "lowkeyi.h",
+    "lowkeyti.h",
+    "pkcs11ni.h",
+    "sdb.h",
+    "sftkdbt.h",
+    "softkver.h",
+    "softoken.h",
+    "softoknt.h",
+])
+
