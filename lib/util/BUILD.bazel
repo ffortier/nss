@@ -1,5 +1,14 @@
 load("//lib:config.bzl", "cc_library")
 
+# Process nssutil.def into a linker version script for Linux
+genrule(
+    name = "nssutil_version_script",
+    srcs = ["nssutil.def"],
+    outs = ["nssutil.map"],
+    cmd = "grep -v ';-' $< | sed -e 's,;+,,' -e 's; DATA ;;' -e 's,;;,,' -e 's,;.*,;,' > $@",
+    visibility = ["//:__pkg__"],
+)
+
 exports_files([
     "base64.h",
     "ciferfam.h",

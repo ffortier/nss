@@ -18,6 +18,12 @@ cc_shared_library(
         "@nspr//:plds4",
         "@nspr//:plc4",
     ],
+    user_link_flags = [
+        "-Wl,--version-script=$(location //lib/util:nssutil_version_script)",
+    ],
+    additional_linker_inputs = [
+        "//lib/util:nssutil_version_script",
+    ],
     visibility = ["//visibility:public"],
     deps = [
         "//lib/util",
@@ -31,6 +37,12 @@ cc_shared_library(
         "@nspr//:plds4",
         "@nspr//:plc4",
     ],
+    user_link_flags = [
+        "-Wl,--version-script=$(location //lib/nss:nss_version_script)",
+    ],
+    additional_linker_inputs = [
+        "//lib/nss:nss_version_script",
+    ],
     visibility = ["//visibility:public"],
     deps = [
         "//lib/nss",
@@ -43,6 +55,12 @@ cc_shared_library(
         "@nspr//:nspr4",
         "@nspr//:plds4",
         "@nspr//:plc4",
+    ],
+    user_link_flags = [
+        "-Wl,--version-script=$(location //lib/smime:smime_version_script)",
+    ],
+    additional_linker_inputs = [
+        "//lib/smime:smime_version_script",
     ],
     visibility = ["//visibility:public"],
     deps = [

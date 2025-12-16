@@ -1,5 +1,14 @@
 load("//lib:config.bzl", "cc_library")
 
+# Process smime.def into a linker version script for Linux
+genrule(
+    name = "smime_version_script",
+    srcs = ["smime.def"],
+    outs = ["smime.map"],
+    cmd = "grep -v ';-' $< | sed -e 's,;+,,' -e 's; DATA ;;' -e 's,;;,,' -e 's,;.*,;,' > $@",
+    visibility = ["//:__pkg__"],
+)
+
 exports_files([
     "cms.h",
     "cmslocal.h",
