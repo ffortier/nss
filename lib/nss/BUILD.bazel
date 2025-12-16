@@ -14,9 +14,6 @@ cc_library(
         "nssver.c",
         "utilwrap.c",
     ],
-    copts = [
-        "-Ilib/util",
-    ],
     implementation_deps = [
         "//lib/base",
         "//lib/certdb",
@@ -26,6 +23,9 @@ cc_library(
         "//lib/libpkix",
         "//lib/pk11wrap",
         "//lib/pki",
+    ],
+    includes = [
+        "../util",
     ],
     textual_hdrs = [
         "//lib/util:templates.c",
