@@ -2,6 +2,7 @@ load("@rules_cc//cc:cc_library.bzl", _cc_library = "cc_library")
 
 def cc_library(name, local_defines = [], deps = [], **kwargs):
     kwargs.setdefault("visibility", ["//lib:__subpackages__"])
+    kwargs.setdefault("alwayslink", True)
 
     return _cc_library(
         name = name,
