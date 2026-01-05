@@ -25,6 +25,10 @@ cc_library(
     includes = [
         "./include",
     ],
+    local_defines = [
+        "__DBINTERFACE_PRIVATE",
+        "MEMMOVE",
+    ],
     visibility = ["//visibility:public"],
     deps = [
         "@nspr//pr",
